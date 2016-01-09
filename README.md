@@ -1,5 +1,7 @@
 # BitmarketAnalyzer
-Simple Bitcoin Market analyzer Android app which uses an API provided by http://www.blockchain.info
+Simple Bitcoin Market analyzer Android app which uses a market API.
+
+The market API is provided by http://www.blockchain.info
 
 ## Classes/Libraries:
 ```
