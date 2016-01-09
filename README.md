@@ -3,6 +3,6 @@ Simple Bitcoin Market analyzer Android app which uses an API provided by http://
 
 ## Classes/Libraries:
 ```
-GraphView widget: http://www.android-graphview.org/
-HttpUtils class: http://loopj.com/android-async-http/
+GraphView widget: http://www.android-graphview.org
+HttpUtils class: http://www.loopj.com/android-async-http
 ```
