@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_nav">
+        <item>Recent Transactions</item>
+        <item>Charts</item>
+    </string-array>
+
+    <string-array name="charts">
+        <item>Bitcoins in Circulation</item>
+        <item>Difficulty</item>
+        <item>Market Cap</item>
+        <item>Market Price (USD)</item>
+        <item>Number of Transactions</item>
+    </string-array>
+</resources>

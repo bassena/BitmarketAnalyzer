@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="b51.heritage.ca.bitmarketanalyzer.LatestTransactionsActivity">
+
+    <item
+        android:id="@+id/latest_trans_refresh"
+        android:title="@string/refresh"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        app:showAsAction="ifRoom" />
+</menu>

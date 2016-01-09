@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="b51.heritage.ca.bitmarketanalyzer.ChartFragment">
+
+
+
+    <!-- Android GraphView: http://www.android-graphview.org/ -->
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/btcGraph"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/tvChartName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvChartName"
+        android:textSize="@dimen/chartName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_activity_charts_main" />
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <RelativeLayout android:id="@+id/container" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvBTCApprox"
+            android:textStyle="bold"
+            android:text="@string/approxVal"
+            android:layout_marginTop="25dp"
+            android:textSize="@dimen/btcTitleSize"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/tvCentre" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvCentre"
+            android:layout_alignTop="@+id/tvBTCApprox"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvCurrencySymbol"
+            android:layout_alignTop="@+id/tvCentre"
+            android:layout_toEndOf="@+id/tvCentre"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/btcTitleMargin"
+            android:textSize="@dimen/btcTitleSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvCurrentBTCVal"
+            android:layout_alignTop="@+id/tvCentre"
+            android:layout_toEndOf="@+id/tvCurrencySymbol"
+            android:textStyle="bold"
+            android:textSize="@dimen/btcTitleSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvCurrencyName"
+
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/txtCurrencyInput"
+            android:layout_toStartOf="@+id/txtCurrencyInput" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/txtCurrencyInput"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tvBTCApprox"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_below="@+id/txtCurrencyInput"
+            android:layout_alignStart="@+id/txtCurrencyInput"
+            android:layout_marginBottom="-15dp"
+            android:id="@+id/grpConversion">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rdoTo"
+                android:id="@+id/rdoTo"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rdoFrom"
+                android:id="@+id/rdoFrom"
+                android:layout_marginStart="20dp"
+                android:checked="false" />
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/txtBtcInput"
+            android:layout_below="@+id/grpConversion"
+            android:layout_toEndOf="@+id/tvCurrencyName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/btc"
+            android:id="@+id/tvBTC"
+            android:layout_below="@+id/grpConversion"
+            android:layout_toStartOf="@+id/grpConversion"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/convert"
+            android:id="@+id/btnConvert"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txtBtcInput"
+            android:layout_toEndOf="@+id/tvCurrencyName" />
+
+    </RelativeLayout>
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+    <fragment android:id="@+id/navigation_drawer"
+        android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:name="b51.heritage.ca.bitmarketanalyzer.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
